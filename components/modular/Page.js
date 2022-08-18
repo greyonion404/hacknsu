@@ -1,10 +1,11 @@
 import { FullPage } from "../styled/FullPage";
 import { Text } from "../styled/Text";
+import TopBar from "./TopBar";
 
 export default function Page({ profile, children }) {
     return (
         <FullPage>
-            <Text>{"It's a Page"}</Text>
+            <TopBar profile={profile}/>
             {children}
         </FullPage>
     )
