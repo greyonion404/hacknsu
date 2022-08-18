@@ -24,7 +24,32 @@ async function getUserWithAuth0ID(auth0ID) {
     return { data, error };
 }
 
+
+async function getComplaintsOfBus(busID)
+{
+    const {data, error } = await supabase.from('complaints').select('*').eq('busID', busID);
+    return {data, error};
+}
+
+async function addComplaintToDatabase(complainID, busID, title, details, timestamp)
+{
+    let complaint = {
+        complainID: complainID,
+        busID: busID,
+        title: title,
+        details: details, // can be STUDENT
+        timestamp: timestamp,
+    };
+    const { data, error } = await supabase.from('complaints').insert([complaint]);
+    return { data, error };
+
+}
+
+
 export {
     addAuth0UserToDatabase,
     getUserWithAuth0ID,
+
+    addComplaintToDatabase,
+    getComplaintsOfBus,
 }
