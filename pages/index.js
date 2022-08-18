@@ -1,18 +1,20 @@
 import React from 'react';
 import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
-import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../Utils/database';
+import Link from 'next/link';
 
 
 import { Text } from "../components/styled/Text";
+import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../Utils/database';
 
 export default function Home({profile}) {
   return (
     <div>
       <Text>whoarewe</Text>
-      <a href="/api/auth/logout">logout</a>
+      <Link href="/api/auth/logout">logout</Link>
     </div>
   )
 }
+
 
 
 export const getServerSideProps = withPageAuthRequired({
