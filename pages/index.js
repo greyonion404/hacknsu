@@ -1,17 +1,17 @@
 import React from 'react';
 import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Link from 'next/link';
 
 
 import { Text } from "../components/styled/Text";
 import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../utils/database';
 import Page from '../components/modular/Page';
+import QrCodeScanner from '../components/modular/QRCodeScanner';
 
-export default function Home({profile}) {
+export default function Home({ profile }) {
   return (
-   <Page profile={profile}>
-         <Link href="/api/auth/logout">logout</Link>
-   </Page>
+    <Page profile={profile}>
+      <QrCodeScanner />
+    </Page>
   )
 }
 
@@ -26,7 +26,7 @@ export const getServerSideProps = withPageAuthRequired({
 
     // authenticated by auth0
     let auth0ID = auth0User?.user?.sub;
-    const { data: user , error: retrieveError } = await getUserWithAuth0ID(auth0ID);
+    const { data: user, error: retrieveError } = await getUserWithAuth0ID(auth0ID);
 
 
     // error with supabase query
