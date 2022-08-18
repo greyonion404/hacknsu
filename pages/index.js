@@ -1,7 +1,9 @@
+import { Text } from "../components/styled/Text";
+
 export default function Home() {
   return (
     <div>
-      whoarewe
+      <Text>whoarewe</Text>
     </div>
   )
 }
