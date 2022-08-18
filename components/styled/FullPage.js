@@ -8,4 +8,4 @@ let FullPage = styled.div`
     max-height: 100vh;
 `
 
-export {FullPage};
+export { FullPage };

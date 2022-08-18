@@ -1,5 +1,5 @@
 import { Text } from "../styled/Text";
-import { Bar, Profile, ProfilePicture, LogOutButton } from "../styled/TopBar";
+import { Bar, Profile, ProfilePicture, LogOutButton } from "../styled/bar";
 import { FaSignOutAlt } from 'react-icons/fa'
 import { useRouter } from "next/router";
 

@@ -1,5 +1,5 @@
 import { FullPage } from "../styled/FullPage";
-import { Text } from "../styled/Text";
+import BottomBar from "./BottomBar";
 import TopBar from "./TopBar";
 
 export default function Page({ profile, children }) {
@@ -7,6 +7,7 @@ export default function Page({ profile, children }) {
         <FullPage>
             <TopBar profile={profile}/>
             {children}
+            <BottomBar/>
         </FullPage>
     )
 }
