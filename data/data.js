@@ -24,13 +24,15 @@ const color = {
     dark: "#000000",
     light: "#FFFFFF",
     low: "#000000",
-    medium: "#000000",
+    medium: "#111111",
+    high: "#222222",
     secondaryLow: "#000000",
     secondaryMedium: "#000000",
+    secondaryHigh: "#000000",
     text: {
-        low: "#000000",
-        medium: "#000000",
-        high: "#000000",
+        low: "#bbbbbb",
+        medium: "#cccccc",
+        high: "#dddddd",
         inverted: "#000000"
     }
 };
