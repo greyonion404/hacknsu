@@ -9,7 +9,7 @@ import Page from '../components/modular/Page';
 
 export default function Home({profile}) {
   return (
-   <Page>
+   <Page profile={profile}>
          <Link href="/api/auth/logout">logout</Link>
    </Page>
   )
