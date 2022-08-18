@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 import { Text } from "../components/styled/Text";
-import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../Utils/database';
+import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../utils/database';
 
 export default function Home({profile}) {
   return (
