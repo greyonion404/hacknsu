@@ -27,6 +27,5 @@ html,
 body,
 #__next,
 #__next>div {
-  background-color: var(--primaryMedium);
   height: 100%;
 }

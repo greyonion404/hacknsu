@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 import { Text } from "../components/styled/Text";
 import { addAuth0UserToDatabase, getUserWithAuth0ID } from '../utils/database';
+import Page from '../components/modular/Page';
 
 export default function Home({profile}) {
   return (
-    <div>
-      <Text>whoarewe</Text>
-      <Link href="/api/auth/logout">logout</Link>
-    </div>
+   <Page>
+         <Link href="/api/auth/logout">logout</Link>
+   </Page>
   )
 }
 
